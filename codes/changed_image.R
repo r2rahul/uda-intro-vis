@@ -8,7 +8,7 @@ my_data <- data.frame(invoices = c(1986, 1989, 1990, 1991, 1993),
                       year = c(12, 11.8, 11.6, 11.4, 10.3))
 
 p <- ggplot(my_data, aes(x = invoices, y = year)) +
-  geom_point(size = 4,color="#31a354") +
+  geom_point(shape = 21, size = 3, fill = "white")  +
   geom_line(size = 1) + 
   scale_x_continuous(breaks = seq(1986, 1993, 1), limits = c(1985, 1994), 
                      expand = c(0, 0)) +
