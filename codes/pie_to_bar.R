@@ -29,6 +29,5 @@ p
 
 ggsave(paste0("pietobar", ".png"), p,
 			 width = 8, height = 5)
-## Conection issue
-#py <- plotly()
-#pietobar <- py$ggplotly(p)
+py <- plotly()
+pietobar <- py$ggplotly(p)
