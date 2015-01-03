@@ -1,7 +1,7 @@
 ## Mini Project 2
 The following figure I decided to redesign:
 
-![The dual axis image](figures/mini1.png " The image to redesign")
+![The dual axis image](../figures/mini1.png " The image to redesign")
 
 Image source [WTF Visualizations](http://viz.wtf/)
 
