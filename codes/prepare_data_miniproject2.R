@@ -15,7 +15,7 @@ write.table(data,file=fpath2,sep="\t",row.names=FALSE,quote = FALSE)
 
 ## Plot using ggplot2
 library(ggplot2)
-this_base <- "minproject2"
+this_base <- "figures/minproject2"
 
 data$salary<-data$salary*1e-3
 
@@ -24,8 +24,8 @@ p <- ggplot(data, aes(x = experience, y = salary)) +
   scale_x_continuous(breaks = c(0, 5, 10), limits = c(-1, 11), expand = c(0, 0)) +
   scale_y_continuous(breaks = seq(0, 120, 20), limits = c(0, 120), 
                      expand = c(0, 0)) +
-  labs(x = "Experience (Years)", y = "Salary (Thousands US dollars)") +
-  ggtitle(expression(atop(bold("Salary Trend with Years of Expereince")))) +
+  labs(x = "Experience (Years)", y = "Salary (Thousands, US dollars)") +
+  ggtitle(expression(atop(bold("Increment in salary with increasing experience")))) +
   theme_bw() +
   theme(panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_line(colour="grey60"),
