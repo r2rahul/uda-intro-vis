@@ -13,7 +13,7 @@ The first observation is that the two arrows outside the axis label is confusing
 
 First, pencil-paper sketch of the graph. 
 
-![Sketch](F:/linux_windows/onlinecourses/udacity/introductiontodatavisualization/uda-intro-vis/figures/sketch.png "Sketch of the redesign image")
+![Sketch](../figures/sketch.png "Sketch of the redesign image")
 
 Next, the visualization is done in dimple.js and can be accessed through following links. 
 
@@ -21,4 +21,4 @@ The visual clutter is removed like unnecessary colors. Next, informative labels 
 
 Furthermore, the graphics is replotted with ggplot2 and plot.ly. The graphics can be viewed by following the link [Redesigned figure](https://plot.ly/~rrahul/57)
 
-![GGPLOT2](F:/linux_windows/onlinecourses/udacity/introductiontodatavisualization/uda-intro-vis/figures/minproject2.png "Redisigned Image")
+![GGPLOT2](../figures/minproject2.png "Redisigned Image")
