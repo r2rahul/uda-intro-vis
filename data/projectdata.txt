@@ -1,0 +1,7 @@
+Survival	Embarked	Freq
+Dead	Cherbourg	75
+Alive	Cherbourg	93
+Dead	Queenstown	47
+Alive	Queenstown	30
+Dead	Southampton	427
+Alive	Southampton	217
