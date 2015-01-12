@@ -1,7 +1,7 @@
-Survival	Embarked	Freq
-Dead	Cherbourg	75
-Alive	Cherbourg	93
-Dead	Queenstown	47
-Alive	Queenstown	30
-Dead	Southampton	427
-Alive	Southampton	217
+Survived	Embarked	Freq	ratio
+Alive	Cherbourg	93	0.553571428571429
+Dead	Cherbourg	75	0.446428571428571
+Alive	Queenstown	30	0.38961038961039
+Dead	Queenstown	47	0.61038961038961
+Alive	Southampton	217	0.33695652173913
+Dead	Southampton	427	0.66304347826087
