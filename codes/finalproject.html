@@ -10,11 +10,13 @@
         d3.tsv("../data/projectdata.txt", function (data) {
         var myChart = new dimple.chart(svg, data);
         myChart.setBounds(60, 30, 505, 305);
-        var x = myChart.addCategoryAxis("x", ["Embarked","Survived"]);      
+        var x = myChart.addCategoryAxis("x", ["Embarked","Survived"]); 
+        x.addOrderRule("Embarked", true);     
         var y = myChart.addMeasureAxis("y", "ratio");
         var s = myChart.addSeries("Survived", dimple.plot.bar);
         myChart.addLegend(60, 35, 510, 20, "right");
-        //myChart.assignColor("axis",["#1b9e77","#d95f02"])
+        myChart.assignColor("Dead", "#d95f02");
+        myChart.assignColor("Alive", "#1b9e77");
         myChart.draw();
         x.titleShape.text("Cities/Port");
         y.titleShape.text("ratio of people dead/alive");
@@ -23,7 +25,7 @@
           .attr("y", myChart._yPixels()- 15 )
           .style("text-anchor", "middle")
           .style("font-family", "sans-serif")   
-          .text("Proportions of survivors or death according to boarding port")
+          .text("Proportions of survivors and death according to boarding port")
    });
       /*.style("font-weight", "bold")*/
     </script>
