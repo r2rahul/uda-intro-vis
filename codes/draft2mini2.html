@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <div id="chartContainer">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 600, 400);
+    d3.tsv("mini2data.tsv", function (data) {
+      var myChart = new dimple.chart(svg, data);
+      myChart.setBounds(60, 30, 505, 305);
+      var x = myChart.addCategoryAxis("x", "experience");  
+      x.addOrderRule("experience", false);     
+      var y = myChart.addMeasureAxis("y", "salary");
+      var s = myChart.addSeries(null, dimple.plot.bar);
+      myChart.draw(); 
+      x.titleShape.text("Experience (Years)");
+      y.titleShape.text("Salary (Thousands, US dollars)");      
+      x.ticks=2;
+    svg.append("text")
+   .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
+   .attr("y", myChart._yPixels()- 15 )
+   .style("text-anchor", "middle")
+   .style("font-family", "sans-serif")   
+   .text("Increment in salary with increasing experience")
+    });
+    /*.style("font-weight", "bold")*/
+  </script>
+</div>
+</body>
+</html>

@@ -6,20 +6,28 @@
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
     <script type="text/javascript">
+    // Initialize the library
         var svg = dimple.newSvg("#chartContainer", 600, 400);
         d3.tsv("../data/projectdata.txt", function (data) {
         var myChart = new dimple.chart(svg, data);
         myChart.setBounds(60, 30, 505, 305);
+        // Assign data to x-axis
         var x = myChart.addCategoryAxis("x", ["Embarked","Survived"]); 
+        // Reorder the data based on Embarked data.
         x.addOrderRule("Embarked", true);     
+        // Add data to y-axis and select the bar plot.
         var y = myChart.addMeasureAxis("y", "ratio");
         var s = myChart.addSeries("Survived", dimple.plot.bar);
+        // Add legend
         myChart.addLegend(60, 35, 510, 20, "right");
+        // Change fill colors of bar plot. 
         myChart.assignColor("Dead", "#d95f02");
         myChart.assignColor("Alive", "#1b9e77");
         myChart.draw();
+        // Add labels to axis
         x.titleShape.text("Cities/Port");
         y.titleShape.text("ratio of people dead/alive");
+        // Add the title to plot
         svg.append("text")
           .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
           .attr("y", myChart._yPixels()- 15 )
