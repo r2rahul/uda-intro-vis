@@ -1,0 +1,46 @@
+---
+title: "Interactive Graph"
+author: "Parimal and Rahul"
+date: "Sunday, September 28, 2014"
+output: html_document
+---
+
+```{r}
+library(RCurl)
+library(d3Network)
+options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl")))
+URL <- "https://raw.githubusercontent.com/christophergandrud/d3Network/master/JSONdata/flare.json"
+#Flare <- getURL(URL)
+#Flare <- rjson::fromJSON(Flare)
+```
+
+You can also embed plots, for example:
+
+```{r, results='asis'}
+
+```
+
+```{r}
+modelProcess=list(name="Modeling Process",children=list(list(name="Assumptions",children=
+list(list(name="Formulation",children=list(
+  list(name="Solution", children=list(list(name="Validation",children=list(list(name="Analysis",children=list(list(name="Predictions"))                                                                                ))))))                                                            
+)))))
+  
+  
+  
+ 
+```
+
+```{r, results='asis'}
+d3ClusterDendro(List =modelProcess, fontsize = 12,
+                zoom = TRUE, widthCollapse = 0.5,
+                ,height =250, width = 400,opacity = 1.0, file = "./modeling.html",
+                iframe = TRUE, nodeColour = "#7570b3", linkColour = "#d95f02",
+                diameter = 980,textColour = "#1b9e77"
+                )
+# d3Tree(List = modelProcess, fontsize = 12, diameter = 1000,
+#        textColour = "#D95F0E", linkColour = "#FEC44F",
+#        nodeColour = "#D95F0E")
+```
+
+
